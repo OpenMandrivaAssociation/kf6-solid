@@ -27,6 +27,7 @@ BuildRequires: doxygen
 BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
+BuildRequires: flex
 Requires: %{libname} = %{EVRD}
 
 %description
