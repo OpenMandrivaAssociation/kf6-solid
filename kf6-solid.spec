@@ -29,6 +29,10 @@ BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: flex
 BuildRequires: bison
+BuildRequires: pkgconfig(libimobiledevice-1.0)
+BuildRequires: pkgconfig(libplist-2.0)
+BuildRequires: pkgconfig(mount)
+BuildRequires: pkgconfig(libudev)
 Requires: %{libname} = %{EVRD}
 
 %description
