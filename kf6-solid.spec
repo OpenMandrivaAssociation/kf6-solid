@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Solid
 %define devname %mklibname KF6Solid -d
-%define git 20230605
+%define git 20230606
 
 Name: kf6-solid
 Version: 5.240.0
