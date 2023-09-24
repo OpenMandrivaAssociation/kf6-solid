@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Solid
 %define devname %mklibname KF6Solid -d
-%define git 20230918
+%define git 20230924
 
 Name: kf6-solid
 Version: 5.240.0
@@ -85,4 +85,3 @@ Desktop hardware abstraction
 
 %files -n %{libname}
 %{_libdir}/libKF6Solid.so*
-%{_qtdir}/qml/org/kde/solid
