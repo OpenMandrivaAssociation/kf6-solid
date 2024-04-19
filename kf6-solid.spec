@@ -7,12 +7,14 @@
 
 Name: kf6-solid
 Version: 6.1.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/solid/-/archive/master/solid-master.tar.bz2#/solid-%{git}.tar.bz2
 %else
 Source0: http://download.kde.org/%{stable}/frameworks/%{major}/solid-%{version}.tar.xz
 %endif
+# https://invent.kde.org/frameworks/solid/-/commit/9ecaf388ccd41d2831ab3833c26627f72ab78f40
+Patch0: backport-9ecaf388ccd41d2831ab3833c26627f72ab78f40.patch
 Summary: Desktop hardware abstraction
 URL: https://invent.kde.org/frameworks/solid
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0

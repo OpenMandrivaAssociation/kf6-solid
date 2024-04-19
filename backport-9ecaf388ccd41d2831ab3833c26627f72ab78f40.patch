@@ -1,0 +1,16 @@
+diff -up solid-6.1.0/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp.1~ solid-6.1.0/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
+--- solid-6.1.0/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp.1~	2024-04-19 12:25:38.319905368 +0200
++++ solid-6.1.0/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp	2024-04-19 12:27:34.236984863 +0200
+@@ -363,7 +363,11 @@ QString StorageAccess::generateReturnObj
+ 
+ QString StorageAccess::clearTextPath() const
+ {
+-    return m_device->prop("CleartextDevice").value<QDBusObjectPath>().path();
++    const QString path = m_device->prop("CleartextDevice").value<QDBusObjectPath>().path();
++    if (path != QLatin1String("/")) {
++        return path;
++    }
++    return QString();
+ }
+ 
+ bool StorageAccess::requestPassphrase()
